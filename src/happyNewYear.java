@@ -32,7 +32,7 @@ class TimerThread extends Thread {
 			clockText = clockText.concat("분:");
 			clockText = clockText.concat(Integer.toString(secondFirstDay-secondNow + 1)); // 새해 첫 날 보다 1초 차이이기 때문
 			timerLabel.setText("2021년까지: "+clockText);
-			if((hourFirstDay-hourNow <= 0) && (minFirstDay-minNow <= 0) && (secondFirstDay-secondNow+1 >= 0)) {
+			if((hourFirstDay-hourNow <= 0) && (minFirstDay-minNow < 0) && (secondFirstDay-secondNow+1 >= 0)) {
 				timerLabel.setText("Happy New Year~! 2021년은 코로나 out!!");
 			}
 			try {
